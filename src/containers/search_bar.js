@@ -14,9 +14,13 @@ class SearchBar extends Component {
     this.setState({ term: event.target.value });
   }
 
+  onFormSubmit(event){
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <form className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group">
         <input
           placeholder="Cidade que deseja saber a previsão do tempo para os próximos  dias"
           className="form-control"
