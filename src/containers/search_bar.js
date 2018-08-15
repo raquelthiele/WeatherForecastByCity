@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeather } from '../actions/index';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -16,6 +18,7 @@ class SearchBar extends Component {
 
   onFormSubmit(event){
     event.preventDefault();
+
   }
 
   render() {
@@ -41,4 +44,6 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps) (SearchBar);
+
+
+export default connect(mapStateToProps, ) (SearchBar);
